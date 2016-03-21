@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MessagingFactoryMgr.cs" />
+    <Compile Include="MessagingFactoryMg.cs" />
     <Compile Include="NamespaceMgr.cs" />
     <Compile Include="SaSAuthentication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

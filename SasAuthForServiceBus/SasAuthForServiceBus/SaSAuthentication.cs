@@ -28,14 +28,14 @@ namespace SasAuthForServiceBus
 
             //If policy has manage or listen claims must be possible to subscribe to a topic and start listening
             //The policy must be created AFTER the topic is created
-            MessagingFactoryMgr listenFactory = new MessagingFactoryMgr(NamespaceName, authListen.PrimaryKey, "VegetablesListenRule");
+            MessagingFactoryMg listenFactory = new MessagingFactoryMg(NamespaceName, authListen.PrimaryKey, "VegetablesListenRule");
 
             //We can create a subscription since the policy allow to listen
             SubscriptionClient subscription = listenFactory.GetSubscriptionClientClient(td.Path, "AllMessages");
 
             //If policy has manage or send claims must be possible to send a messag3e to the topic
             //The policy must be created AFTER the topic is created
-            MessagingFactoryMgr sendFactory = new MessagingFactoryMgr(NamespaceName, authSend.PrimaryKey, "VegetablesSendRule");
+            MessagingFactoryMg sendFactory = new MessagingFactoryMg(NamespaceName, authSend.PrimaryKey, "VegetablesSendRule");
 
             //We can create a new topic client since the policy allow to send
             TopicClient topicClient = sendFactory.GetTopicClient(td.Path);
