@@ -25,7 +25,7 @@ namespace SasAuthForServiceBus
         {
             return _internalMessagingFactory.CreateTopicClient(pathName);
         }
-        public SubscriptionClient GetSubscriptionClientClient(string topicPath, string subscriptionName)
+        public SubscriptionClient GetSubscriptionClient(string topicPath, string subscriptionName)
         {
             return _internalMessagingFactory.CreateSubscriptionClient(topicPath,subscriptionName);
         }

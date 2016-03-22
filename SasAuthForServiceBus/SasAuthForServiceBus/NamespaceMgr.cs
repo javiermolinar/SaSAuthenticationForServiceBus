@@ -44,10 +44,7 @@ namespace SasAuthForServiceBus
         //Namespace police must has manage clains in order to create, delete, update or list topics, queues or subscriptions
         public  void CreateSubscription(string pathName, string subscriptionName)
         {
-            if (!_internalNamespaceManager.TopicExists(pathName))
-            {
-                _internalNamespaceManager.CreateSubscription(pathName, subscriptionName);
-            }
+           _internalNamespaceManager.CreateSubscription(pathName, subscriptionName);
         }
 
     }
